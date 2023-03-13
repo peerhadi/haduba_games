@@ -16,7 +16,7 @@
 }
 
 #canvas1{
-    background: url("/Users/hadi/Desktop/images/2D/background.png");
+    background: url("./background.png");
 }
 
 #leaves_left{
