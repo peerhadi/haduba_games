@@ -44,7 +44,7 @@ window.addEventListener("load",function(){
             this.speedY = speedY;
         }
         update(deltaTime){
-            if(this.game.lastKey == "PArrowLeft" | this.game.lastKey === "Pa"){
+            if(this.game.lastKey == "PArrowLeft"){
                 this.setSpeed(-this.maxSpeed, 0);
                 this.frameY = 3;
             }else if(this.game.lastKey == "RArrowLeft" && this.speedX < 0){
