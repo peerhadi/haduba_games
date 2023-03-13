@@ -47,25 +47,25 @@ window.addEventListener("load",function(){
             if(this.game.lastKey == "PArrowLeft" | this.game.lastKey === "Pa"){
                 this.setSpeed(-this.maxSpeed, 0);
                 this.frameY = 3;
-            }else if(this.game.lastKey == "RArrowLeft" || this.game.lastkey == "Ra" && this.speedX < 0){
+            }else if(this.game.lastKey == "RArrowLeft" && this.speedX < 0){
                 this.setSpeed(0, 0);
                 this.frameY = 2;
-            } else if(this.game.lastKey == "PArrowRight" || this.game.lastkey == "Pd" ){ 
+            } else if(this.game.lastKey == "PArrowRight"){ 
                 this.setSpeed(this.maxSpeed,0);
                 this.frameY = 5;
-            } else if((this.game.lastKey == "RArrowRight" || this.game.lastKey === "Rd") && this.speedX > 0){
+            } else if((this.game.lastKey == "RArrowRight"){
                 this.setSpeed(0, 0);
                 this.frameY = 4;
-            }else if(this.game.lastKey == "PArrowUp" || this.game.lastKey == "Pw"){
+            }else if(this.game.lastKey == "PArrowUp"){
                 this.setSpeed(0, -this.maxSpeed * 0.6);
                 this.frameY = 7;
-            } else if((this.game.lastKey == "RArrowUp" || this.game.lastKey == "Rw") && this.speedY < 0){
+            } else if((this.game.lastKey == "RArrowUp") && this.speedY < 0){
                 this.setSpeed(0, 0);
                 this.frameY = 6;
-            } else if(this.game.lastKey == "PArrowDown" || this.game.lastKey == "Rs"){
+            } else if(this.game.lastKey == "PArrowDown"){
                 this.setSpeed(0, this.maxSpeed * 0.6);
                 this.frameY = 1;
-            }else if((this.game.lastKey == "RArrowDown" || this.game.lastKey == "Rs") && this.speedY > 0){
+            }else if((this.game.lastKey == "RArrowDown") && this.speedY > 0){
                 this.setSpeed(0, 0);
                 this.frameY = 0;
             }
