@@ -1,18 +1,322 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link href="style.css" rel="stylesheet">
+    <script src="script.js" async></script>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Quicksand:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="wrapper">
-      <canvas id="canvas1"></canvas>
-      <img src="./overlay.png" alt="overlay" id="overlay">
-      <img src="./leaves_right.png" alt="leaves_right" id="leaves_right">
-      <img src="./leaves_left.png" alt="leaves_left" id="leaves_left">
+    <h1 class="page-title">Mix-Or-Match</h1>
+    <div class="overlay-text visible">
+      Click to start
     </div>
-    <img src="./owlbear.png" alt="owlbear" id="owlbear">
-    <img src="./bush.png" alt="bush" id="bush">
-    <img src="./plant.png" alt="plant" id="plant">
-    <img src="./grass.png" alt="grass" id="grass">
-    <script src="script.js"></script>
+    <div id="game-over-text" class="overlay-text">
+      GAME OVER
+      <span class="overlay-text-small">Click to restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+      Victory
+      <span class="overlay-text-small">Click to restart</span>
+    </div>
+    <div class="game-container">
+      <div class="game-info-container">
+        <div class="game-info">
+          Time <span id="time-remaining">100</span>
+        </div>
+        <div class="game-info">
+          Flips <span id="flips">0</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/bat.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Ghost.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Dracula.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Dracula.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/eye.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Ghost.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Skull.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Ghost.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/bat.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Bones.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Skull.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Ghost.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/pumpkin.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/Bones.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/pumpkin.png">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/Cobweb.png">
+          <img class="spider" src="/Users/hadi/Desktop/images/Spider.png">
+          
+        </div>
+        
+        <div class="card-front card-face">
+          <img class="cob-web cob-web-top-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-top-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-left" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="cob-web cob-web-bottom-right" src="/Users/hadi/Desktop/images/CobwebGrey.png">
+          <img class="card-value" src="/Users/hadi/Desktop/images/eye.png">
+        </div>
+      </div>
+    </div>
   </body>
 </html>
