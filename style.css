@@ -5,7 +5,7 @@
 
 html{
     min-height: 100vh;
-    cursor: url("/Users/hadi/Desktop/images/Ghost.cur"), auto;
+    cursor: url("./images/Ghost.cur"), auto;
 }
 
 body{
@@ -133,7 +133,7 @@ body{
 }
 
 .card:hover{
-    cursor: url("/Users/hadi/Desktop/images/GhostHover.cur"),auto;
+    cursor: url("./images/GhostHover.cur"),auto;
 }
 
 .overlay-text-small{

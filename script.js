@@ -1,10 +1,10 @@
 class AudioController{
     constructor(){
-        this.bgMusic = new Audio("./Assets_Audio_creepy.mp3 ");
-        this.flipSound = new Audio("./Assets_Audio_flip.wav ");
-        this.matchSound = new Audio("./Assets_Audio_match.wav ");
-        this.victorySound = new Audio("./Assets_Audio_victory.wav ");
-        this.gameOverSound = new Audio("./Assets_Audio_gameOver.wav ");
+        this.bgMusic = new Audio("/Users/hadi/Desktop/Assets_Audio_creepy.mp3 ");
+        this.flipSound = new Audio("/Users/hadi/Desktop/Assets_Audio_flip.wav ");
+        this.matchSound = new Audio("/Users/hadi/Desktop/Assets_Audio_match.wav ");
+        this.victorySound = new Audio("/Users/hadi/Desktop/Assets_Audio_victory.wav ");
+        this.gameOverSound = new Audio("/Users/hadi/Desktop/Assets_Audio_gameOver.wav ");
         this.bgMusic.volumne = 0.2;
         this.bgMusic.loop = true;
     }
