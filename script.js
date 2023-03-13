@@ -53,7 +53,7 @@ window.addEventListener("load",function(){
             } else if(this.game.lastKey == "PArrowRight"){ 
                 this.setSpeed(this.maxSpeed,0);
                 this.frameY = 5;
-            } else if((this.game.lastKey == "RArrowRight"){
+            } else if(this.game.lastKey == "RArrowRight"){
                 this.setSpeed(0, 0);
                 this.frameY = 4;
             }else if(this.game.lastKey == "PArrowUp"){
